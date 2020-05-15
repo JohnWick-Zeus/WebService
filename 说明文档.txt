@@ -1,0 +1,27 @@
+WebService1.0.0
+天气数据服务第一版：
+Weather Online Controller 提供九个天气在线查询接口：
+	/weather/forecast15days 天气预报15天 Method=POST
+	/weather/forecast24hours 天气预报当天 Method=POST
+	/weather/condition 天气预报当天生活指数 Method=POST
+	/weather/index 生活指数当天 Method=PUT
+	/weather/limit 限行数据 Method=PUT
+	/weather/shortforecast 短时预报（2小时）Method=PUT
+	/weather/aqiforecast5days 空气质量指数预报（6天）Method=PUT
+	/weather/aqi 空气质量指数当天 Method=PUT
+	/weather/alert 天气预警 Method=PUT
+	输入：String[] 纬度+经度信息 
+	输出：String 天气信息
+Data 2 Csv Controller 提供三个数据写入csv接口：
+	/api/forecast15days 天气预报15天数据写入CSV文件 Method=POST
+	/api/forecast24hours 天气预报当天数据写入CSV文件 Method=POST
+	/api/condition 天气实况当天数据写入CSV文件 Method=POST
+	输入：String x 4 a、c两点的经纬度 
+	输出：指定目录下的csv文件
+	
+WebService1.0.1
+天气数据服务第二版：
+	增加了csv中的title，写入方式为添加，需要保证指定目录下没有同名csv文件。
+	将保存路径外放带application.propertities中
+	
+	
